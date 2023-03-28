@@ -14,3 +14,23 @@
     d. res.send() is used to send the data from server to ui 
 
     e. res.sendFile() is used to send the html file to the browser 
+
+
+
+29/3/23
+
+1. Create note app ui
+2. Take ui data in browser console using add event listener 
+3. Http request 
+    a. Body parser 
+    b. API 
+
+4. API 
+    a. get (Receive)
+    b. post (Send)
+
+5. Add 2 middlewares 
+    a. url encoded
+    b. json 
+
+6. Add async and await in the function 

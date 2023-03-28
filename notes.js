@@ -7,32 +7,30 @@ const app = express()
 // Assiging port number 
 const port = 3000
 
-// Middleware assistant for getting data from front end
-app.use(express.urlencoded({ extended: true }))
-
-// Middleware assistant for conveting data into json
-app.use(express.json({ extended: true }))
-
 // Set EJS as templating engine
 app.set('view engine', 'ejs');
 
 // Middleware 
 app.use(express.static('static'))
 
+student1 = {
+    studentName: "Saad", 
+    age: 23,
+    Unversity: "Jamia Nizamia"
+}
 
 // Here we are sending response on the browser
-// These are page rendering routes
-app.get('/', (req, res) => { // it is even called "end point, router"
+app.get('/', (req, res) => {
 
+  // Data of response 
+//   res.send(student1)
+  // res.sendFile('views/index.html', {root: __dirname})
   res.render('index')
 })
 
-// API 
-// These are apis 
-app.post('/postNote', (req, res) => { // it is even called "end point, router"
-  let data = req.body
-  console.log(data)
-  res.status(200).json({success:true})
+app.get('/vasim', (req, res) => {
+    
+  res.send('Hello, Mohammed Vasim')
 })
 
 

@@ -99,15 +99,19 @@
         saveNote.addEventListener('click', async () => {
             // console.log("Save note is done")
             let title = document.getElementById("title")
-            let note = document.getElementById("note")
-            console.log("Title is " + title.value, " Note is " + note.value)
-            data = {
+            let subject = document.getElementById("note")
+            console.log("Title is " + title.value, " Note is " + subject.value)
+            const note = {
                 "title": title.value, 
-                "note": note.value
+                "subject": subject.value
             }
-            let endPoint = '/postNote'
-            let response = await postData(endPoint, data)
+            title.value = ""
+            subject.value = ""
+            let response = await postData('/postNote', note)
             console.log(response)
+            if (response.success) {
+                alert("Your note has been successfully saved in the database")
+            }
         })
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

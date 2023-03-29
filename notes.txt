@@ -20,7 +20,9 @@
 29/3/23
 
 1. Create note app ui
+
 2. Take ui data in browser console using add event listener 
+
 3. Http request 
     a. Body parser 
     b. API 
@@ -34,3 +36,13 @@
     b. json 
 
 6. Add async and await in the function 
+
+
+30/3/23
+
+1. Connection uri [A link which connects express to database]
+2. Creating Schema 
+3. Creating Model 
+4. Add data to database
+5. Create your fields empty 
+6. Write program for success 

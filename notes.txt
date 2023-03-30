@@ -46,3 +46,9 @@
 4. Add data to database
 5. Create your fields empty 
 6. Write program for success 
+7. Install mongoose 
+
+31/3/23
+
+1. Fetch data from database 
+2. Send data to html file 

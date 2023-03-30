@@ -60,6 +60,11 @@ app.post('/postNote', (req, res) => { // it is even called "end point, router"
   res.status(200).json({success:true})
 })
 
+app.get('/getNotes', async (req, res) => { // it is even called "end point, router"
+  let notes = await Note.find()
+  res.send(notes)
+})
+
 
 
 app.listen(port, () => {
